@@ -32,13 +32,18 @@
     transition: width 0.1s ease-in-out;
 }
 
+input::placeholder {
+    font-weight: normal;
+    font-size: initial;
+}
+
 .input:focus {
     outline: none;
     border: 1.5px solid #ab121c;
     width: 23vw;
 }
 
-.login-btn{
+.login-btn {
     margin-top: 8%;
     padding: 12px 40px;
     border-radius: 50px;
@@ -49,17 +54,17 @@
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     cursor: pointer;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.login-btn span{
+.login-btn span {
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.2s;
 }
 
-.login-btn:hover span{
+.login-btn:hover span {
     padding-right: 20px;
 }
 
@@ -82,7 +87,7 @@
     right: 0;
 }
 
-.login-btn:disabled{
+.login-btn:disabled {
     background-color: #ba4d54;
 }
 
@@ -100,13 +105,24 @@
 
 .container {
     /* background-color:#d37379; */
-    /* background-image: url("./background.png"); */
-    background-color:#891018;
+    /* background-color:#891018; */
     width: 100vw;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+
+}
+
+body {
+    background-image: url("./login_bg.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg {
+    backdrop-filter: blur(4px);
 }
 
 .white-container {
@@ -116,18 +132,121 @@
     display: flex;
     flex-direction: row;
     border-radius: 15px;
+
 }
 
 h1 {
     margin: 0;
+    padding: 0;
 }
 
 .carousel-div {
-    border: 1px solid #BFBFBF;
+    /* border: 1px solid #BFBFBF;
     box-shadow: 8px 8px 4px #aaaaaa;
-    border-radius: 50px;
+    border-radius: 50px; */
     width: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
+
+#animated-h1 {
+    /* color: #333; */
+    font-family: tahoma;
+    font-size: 3rem;
+    font-weight: 100;
+    line-height: 1.5;
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    width: 550px;
+  }
+  
+  #animated-h1 span {
+    /* font-size: 40px; */
+    margin-left: 40px;
+  }
+  
+  .message {
+    background-color: yellow;
+    color: #333;
+    display: block;
+    font-weight: 900;
+    overflow: hidden;
+    position: absolute;
+    padding-left: 0.5rem;
+    top: 0.2rem;
+    left: 170px;
+    animation: openclose 5s ease-in-out infinite;
+  }
+  
+  .word1, .word2, .word3 {
+    font-family: tahoma;
+  }
+  
+  @keyframes openclose {
+    0% {
+      top: 0.2rem;
+      width: 0;
+    }
+    5% {
+      width: 0;
+    }
+    15% {
+      width: 230px;
+    }
+    30% {
+      top: 0.2rem;
+      width: 230px;
+    }
+    33% {
+      top: 0.2rem;
+      width: 0;
+    }
+    35% {
+      top: 0.2rem;
+      width: 0;
+    }
+    38% {
+      top: -4.5rem;
+      
+    }
+    48% {
+      top: -4.5rem;
+      width: 190px;
+    }
+    62% {
+      top: -4.5rem;
+      width: 190px;
+    }
+    66% {
+      top: -4.5rem;
+      width: 0;
+      text-indent: 0;
+    }
+    71% {
+      top: -9rem;
+      width: 0;
+      text-indent: 5px;
+    }
+    86% {
+      top: -9rem;
+      width: 285px;
+    }
+    95% {
+      top: -9rem;
+      width: 285px;
+    }
+    98% {
+      top: -9rem;
+      width: 0;
+      text-indent: 5px;
+    }
+    100% {
+      top: 0;
+      width: 0;
+      text-indent: 0;
+    }
+  }
